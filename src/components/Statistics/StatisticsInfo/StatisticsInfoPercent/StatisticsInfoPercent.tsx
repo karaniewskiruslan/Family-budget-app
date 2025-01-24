@@ -30,7 +30,7 @@ const StatisticsInfoPercent = () => {
         name={percentName}
         summary={percent}
         isPercent={true}
-        color="#adadad"
+        color="transparent"
       />
       <section
         data-scroll

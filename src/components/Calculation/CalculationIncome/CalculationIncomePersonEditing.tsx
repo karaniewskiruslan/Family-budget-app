@@ -34,13 +34,13 @@ const CalculationIncomePersonEditing = ({
             value={personName}
             onChange={onChangeEditedName}
             data-clicked={id}
-            className="rounded-md bg-transparent px-1 outline outline-2 -outline-offset-1 outline-gray-400 dark:text-black dark:outline-gray-600"
+            className="rounded-full bg-transparent px-2 outline outline-2 -outline-offset-1 outline-gray-400 dark:text-black dark:outline-gray-600"
           />
         </label>
         <button
           onClick={onClickEditName}
           data-clicked={id}
-          className="absolute -right-8 top-0 size-6 rounded-md bg-transparent p-1 outline outline-2 -outline-offset-1 outline-gray-400 dark:outline-gray-600"
+          className="absolute -right-8 top-0 size-6 rounded-full bg-transparent p-1 outline outline-2 -outline-offset-1 outline-gray-400 dark:outline-gray-600"
         >
           <ConfirmIcon fill={isDarkmode ? "black" : "lightgray"} />
         </button>
@@ -52,7 +52,7 @@ const CalculationIncomePersonEditing = ({
           value={personSalary}
           onChange={onChangeSalary}
           data-clicked={id}
-          className="h-8 rounded-md bg-transparent px-2 py-1 outline outline-2 -outline-offset-1 outline-gray-400 dark:text-black dark:outline-gray-600"
+          className="h-8 rounded-full bg-transparent px-2 py-1 outline outline-2 -outline-offset-1 outline-gray-400 dark:text-black dark:outline-gray-600"
         />
       </label>
     </div>

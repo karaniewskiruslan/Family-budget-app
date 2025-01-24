@@ -12,7 +12,6 @@ const DateMonthActive = ({ month, monthNumber }: Props) => {
 
   const onClickRemoveMonth = () => {
     const newExpensesList = { ...expensesList };
-    console.log(newExpensesList);
     delete newExpensesList[currentDate.year][monthNumber];
     setExpensesList(newExpensesList);
   };

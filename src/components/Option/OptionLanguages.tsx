@@ -3,18 +3,18 @@ import { useTranslation } from "react-i18next";
 import OptionSelector from "./OptionSelector";
 
 const OptionLanguages = () => {
-  const { languages, languagesChoise, setLanguagesChoise } =
+  const { languages, languagesChoice, setLanguagesChoice } =
     useAppContextContainer();
   const { i18n } = useTranslation();
-  const fiteredList = [...languages.filter((lang) => lang !== languagesChoise)];
+  const fiteredList = [...languages.filter((lang) => lang !== languagesChoice)];
 
   return (
     <ul className="group w-7 dark:text-black">
-      <li className="cursor-default">{languagesChoise}</li>
+      <li className="cursor-default">{languagesChoice}</li>
       {fiteredList.map((el, index) => {
         const onClickChangeLanguage = () => {
           if (el === "ENG" || el === "POL" || el === "BLR") {
-            setLanguagesChoise(el);
+            setLanguagesChoice(el);
             i18n.changeLanguage(el);
           }
         };

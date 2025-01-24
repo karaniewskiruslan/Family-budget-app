@@ -65,8 +65,8 @@ type AppContextContainerProps = {
   expensesList: expensesType;
   setExpensesList: React.Dispatch<React.SetStateAction<expensesType>>;
   languages: string[];
-  languagesChoise: "ENG" | "POL" | "BLR";
-  setLanguagesChoise: React.Dispatch<
+  languagesChoice: "ENG" | "POL" | "BLR";
+  setLanguagesChoice: React.Dispatch<
     React.SetStateAction<"ENG" | "POL" | "BLR">
   >;
   htmlElement: DOMTokenList;
@@ -133,9 +133,7 @@ const AppContext = ({ children }: AppContextProps) => {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
 
-    console.log(expensesList);
-
-    if (date.getMonth() in expensesList[date.getFullYear()]) {
+    if (expensesList[date.getFullYear()]) {
       return;
     } else {
       setExpensesList((prev) => ({
@@ -169,7 +167,7 @@ const AppContext = ({ children }: AppContextProps) => {
 
   const languages: string[] = ["ENG", "POL", "BLR"];
 
-  const [languagesChoise, setLanguagesChoise] = useLocalStorage<
+  const [languagesChoice, setLanguagesChoice] = useLocalStorage<
     "ENG" | "POL" | "BLR"
   >("language", "ENG");
 
@@ -193,8 +191,8 @@ const AppContext = ({ children }: AppContextProps) => {
           expensesList,
           setExpensesList,
           languages,
-          languagesChoise,
-          setLanguagesChoise,
+          languagesChoice,
+          setLanguagesChoice,
           htmlElement,
           isDateChanging,
           setIsDateChanging,

@@ -29,7 +29,7 @@ const CalculationExpenseUnitEdited = ({
             placeholder="Name the item"
             value={feeName}
             onChange={onChangeName}
-            className="w-full rounded-md bg-transparent px-2 py-1 outline outline-2 -outline-offset-1 outline-gray-400 placeholder:text-zinc-500 dark:outline-gray-600"
+            className="w-full rounded-full bg-transparent px-2 py-1 outline outline-2 -outline-offset-1 outline-gray-400 placeholder:text-zinc-500 dark:outline-gray-600"
           />
         </label>
         <CalculationExpenseUnitButton

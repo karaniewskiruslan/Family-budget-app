@@ -6,16 +6,26 @@ const DateYear = () => {
   const { isDarkmode, currentDate, setCurrentDate, expensesList } =
     useAppContextContainer();
 
+  console.log(currentDate);
+
   const onClickChangeYear = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (e.currentTarget.classList.contains("rotate-180")) {
       if (currentDate.year - 1 in expensesList) {
-        setCurrentDate((prev) => ({ ...prev, year: prev.year - 1 }));
-      }
+        setCurrentDate((prev) => ({
+          ...prev,
+          year: prev.year - 1,
+          month: Number(Object.keys(expensesList[prev.year - 1])[0]),
+        }));
+
+        return;
+      } else return;
     }
 
-    if (currentDate.year + 1 in expensesList) {
-      setCurrentDate((prev) => ({ ...prev, year: prev.year + 1 }));
-    }
+    setCurrentDate((prev) => ({
+      ...prev,
+      year: prev.year + 1,
+      month: Number(Object.keys(expensesList[prev.year + 1])[0]),
+    }));
   };
 
   return (

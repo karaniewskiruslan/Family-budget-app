@@ -30,7 +30,7 @@ const CalculationExpenseUnitDefault = ({
             placeholder="expense"
             onChange={onChangeFeeCost}
             value={feeCost}
-            className="w-full rounded-md bg-transparent px-2 py-1 outline outline-2 -outline-offset-1 outline-gray-400 placeholder:text-zinc-600 dark:text-black dark:outline-gray-600 md:w-auto"
+            className="w-full rounded-full bg-transparent px-2 py-1 outline outline-2 -outline-offset-1 outline-gray-400 placeholder:text-zinc-600 dark:text-black dark:outline-gray-600 md:w-auto"
           />
         </label>
         <div className="flex h-full gap-2">
